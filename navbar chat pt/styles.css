@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  overflow: hidden;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.toggle-button {
+  cursor: pointer;
+  display: none;
+  /* Hide toggle button by default */
+}
+
+.toggle-button .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.nav-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links ul li {
+  padding: 15px;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: #f0f0f0;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    /* Hide nav links by default on small screens */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    background-color: #333;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+    /* Show nav links when toggle button is clicked */
+  }
+
+  .toggle-button {
+    display: block;
+    /* Display toggle button on small screens */
+    margin-right: 20px;
+  }
+}
+
+
+/* claude style */
+.claude-heading{
+  margin-top: 10rem;
+}
+.navbar-claude {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar-claude a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-claude a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar-claude .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-claude a:not(:first-child) {
+    display: none;
+  }
+
+  .navbar-claude a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-claude.responsive-claude {
+    position: relative;
+  }
+
+  .navbar-claude.responsive-claude .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .navbar-claude.responsive-claude a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- chat gpt html -->
+  <div class="wrapper">
+    <h1>Chat GPT Scientific Calculator</h1>
+    <div class="calculator">
+      <input type="text" id="display" disabled>
+      <div class="keys">
+        <button onclick="appendToDisplay('Math.PI')">π</button>
+        <button onclick="appendToDisplay('Math.sqrt(')">√</button>
+        <button onclick="appendToDisplay('Math.pow(')">x^y</button>
+        <button onclick="appendToDisplay('Math.sin(')">sin</button>
+        <button onclick="appendToDisplay('Math.cos(')">cos</button>
+        <button onclick="appendToDisplay('Math.tan(')">tan</button>
+        <button onclick="appendToDisplay('Math.log10(')">log</button>
+        <button onclick="appendToDisplay('Math.abs(')">abs</button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('/')">/</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('*')">*</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="appendToDisplay('+')">+</button>
+        <button onclick="calculate()">=</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- claude html -->
+  <div class="wrapper">
+    <h1>Claude Scientific Calculator</h1>
+    <div class="claude-calculator">
+      <input type="text" id="claude-display" readonly>
+      <div class="buttons">
+        <button onclick="appendToDisplayClaude('(')" class="function">(</button>
+        <button onclick="appendToDisplayClaude(')')" class="function">)</button>
+        <button onclick="appendToDisplayClaude('Math.PI')" class="function">π</button>
+        <button onclick="appendToDisplayClaude('Math.E')" class="function">e</button>
+        <button onclick="clearDisplayClaude()" id="clear">C</button>
+
+        <button onclick="appendToDisplayClaude('Math.sin(')" class="function">sin</button>
+        <button onclick="appendToDisplayClaude('Math.cos(')" class="function">cos</button>
+        <button onclick="appendToDisplayClaude('Math.tan(')" class="function">tan</button>
+        <button onclick="appendToDisplayClaude('Math.log(')" class="function">log</button>
+        <button onclick="backspaceClaude()" id="backspace">⌫</button>
+
+        <button onclick="appendToDisplayClaude('Math.sqrt(')" class="function">√</button>
+        <button onclick="appendToDisplayClaude('7')" class="number">7</button>
+        <button onclick="appendToDisplayClaude('8')" class="number">8</button>
+        <button onclick="appendToDisplayClaude('9')" class="number">9</button>
+        <button onclick="appendToDisplayClaude('/')" class="operator">/</button>
+
+        <button onclick="appendToDisplayClaude('Math.pow(')" class="function">x^y</button>
+        <button onclick="appendToDisplayClaude('4')" class="number">4</button>
+        <button onclick="appendToDisplayClaude('5')" class="number">5</button>
+        <button onclick="appendToDisplayClaude('6')" class="number">6</button>
+        <button onclick="appendToDisplayClaude('*')" class="operator">*</button>
+
+        <button onclick="factorialClaude()" class="function">n!</button>
+        <button onclick="appendToDisplayClaude('1')" class="number">1</button>
+        <button onclick="appendToDisplayClaude('2')" class="number">2</button>
+        <button onclick="appendToDisplayClaude('3')" class="number">3</button>
+        <button onclick="appendToDisplayClaude('-')" class="operator">-</button>
+
+        <button onclick="appendToDisplayClaude('Math.exp(')" class="function">exp</button>
+        <button onclick="appendToDisplayClaude('0')" class="number">0</button>
+        <button onclick="appendToDisplayClaude('.')" class="number">.</button>
+        <button onclick="calculateClaude()" id="equals">=</button>
+        <button onclick="appendToDisplayClaude('+')" class="operator">+</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
